@@ -1,4 +1,4 @@
-image_env/
+auth_env/
 
 # Ignore cache files
 *.pyc

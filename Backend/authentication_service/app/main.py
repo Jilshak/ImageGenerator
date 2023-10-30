@@ -1,6 +1,8 @@
 from fastapi import FastAPI
-from routers.authentication import auth
-from models.database import engine, SessionLocal, Base
+from .routers.authentication import auth
+# from routers.authentication import auth --> while running it on the local without docker
+# from models.database import engine, SessionLocal, Base --> while running it on the local without docker
+from .models.database import engine, SessionLocal, Base
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()

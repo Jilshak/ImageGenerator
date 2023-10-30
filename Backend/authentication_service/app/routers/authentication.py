@@ -3,8 +3,8 @@ from fastapi import Depends, HTTPException, APIRouter, status
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from typing import Annotated
-from models import users
-from models import database
+from ..models import users, database
+# from models import users, database --> for usage in local without docker
 from passlib.context import CryptContext
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt

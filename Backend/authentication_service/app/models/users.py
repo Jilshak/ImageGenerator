@@ -1,6 +1,8 @@
 from sqlalchemy import Column, Integer, String, Boolean, ARRAY
-from models import database
-from pydantic_models import users
+from ..models import database
+# from models import database --> for using it in local without docker
+# from pydantic_models import users --> for using it in local without docker
+from ..pydantic_models import users
 
 
 class UserModel(users.UserBase):

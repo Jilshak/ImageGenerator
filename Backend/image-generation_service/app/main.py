@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import image_generation
+from .routers import image_generation
 
 app = FastAPI()
 
