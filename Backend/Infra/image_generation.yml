@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-generation-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: image-generation
+  template:
+    metadata:
+      labels:
+        app: image-generation
+    spec:
+      containers:
+        - name: image-generation
+          image: jilshak/image-generation-app:v1
+          imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: image-generation-srv
+spec:
+  selector:
+    app: image-generation
+  ports:
+    - name: image-generation
+      protocol: TCP
+      port: 80
+      targetPort: 80

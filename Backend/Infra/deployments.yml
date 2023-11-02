@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: auth
-          image: authentication-service
+          image: jilshak/authentication-service:latest
+          imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
 kind: Service
