@@ -15,6 +15,7 @@ spec:
       containers:
         - name: auth
           image: jilshak/authentication-service:latest
+          # this is required for the image to be active
           imagePullPolicy: IfNotPresent
 ---
 apiVersion: v1
